@@ -1,0 +1,17 @@
+#include <iostream>
+#include <vector> 
+using namespace std;
+
+int main()
+{
+    int a, a1, a2, a3, a4, A;
+    cin >> a;
+    a1 = (a % 10000) / 1000;
+    a2 = (a % 1000) / 100;
+    a3 = (a % 100) / 10;
+    a4 = a % 10;
+    A = a4 * 1000 + a3 * 100 + a2 * 10 + a1;
+    if (a == A) cout << "YES";
+    else cout << "NO";
+    return 0;
+}
