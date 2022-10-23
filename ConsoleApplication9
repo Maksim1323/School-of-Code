@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, f1 = 0, f2 = 1, x = 0, i = 1;
+    cin >> n;
+    while(x <= n){
+        x = f1 + f2;
+        f1 = f2;
+        f2 = x;
+        i++;
+        if (n == x){
+            cout << 1 << endl << i;
+            break;
+            
+        }else if (n < x) {
+            cout << 0; break;
+            
+        }
+    }
+    return 0;
+}
