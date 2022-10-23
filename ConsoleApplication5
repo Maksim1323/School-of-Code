@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int A1, A2, N, D;
+    cin >> A1 >> A2 >> N;
+    D = A2 -A1;
+    cout << A1 + (N - 1) * D;
+
+    return 0;
+}
