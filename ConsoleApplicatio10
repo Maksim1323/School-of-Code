@@ -1,0 +1,28 @@
+#include <iostream>
+#include <vector> 
+using namespace std;
+
+int main()
+{
+    int max = 0, min = 0; 
+    float srednee = 0.0;
+    vector<int> v(10);
+    for (int i = 1; i <= 10 ; i++){
+        cin >> v[i];
+    }
+    max = v[0];
+    min = v[0];
+    for(int i = 0; i <= 9 ; i++){
+        if (max <= v[i + 1]) max = v[i + 1];
+    }
+    cout << "максимальное = " << max << endl;
+    for(int i = 0; i <= 10 ; i++){
+        if (min >= v[i + 1]) min = v[i + 1];
+    }
+    cout << "минимальное = " << min << endl;
+    for(int i = 0; i <= 10 ; i++){
+        srednee += v[i];
+    }
+    cout << "среднее арифметическое = " << srednee / 10;
+    return 0;
+}
