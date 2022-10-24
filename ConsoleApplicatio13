@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+    int n, m, b = 0;
+    float a;
+    cin >> n >> m;
+    a = float(n) / m;
+    if (a > int(a)){
+        for (int i = 1; i <= m - 1; i++) {cout << int(a) << " "; b += int(a);}
+        cout << n - b;
+    }else{
+        for (int i = 1; i <= m; i++) cout << a << " ";
+    }
+    return 0;
+}
