@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n, dr = 0, dc = 1, r = 0, c = 0;
+    cin << n;
+    for (int cnt = 0; )
+
+    return 0;
+}
+
+dr, dc, r, c = 0, 1, 0, 0
+
+for cnt in range(1, n * m + 1):
+    a[r][c] = cnt
+    
+    if a[(r + dr) % n][(c + dc) % m]:
+        dr, dc = dc, -dr
+
+    r += dr
+    c += dc    
