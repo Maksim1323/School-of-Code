@@ -10,11 +10,11 @@ int main()
     for (int cnt = 1; cnt <= n * n + 1; cnt++){
         a[r][c] = cnt;
         if (a[(r + dr) % n][(c + dc) % n]){
-        dr = dc;
-        dc = -dr;
+            dr, dc = dc, -dr;
+        }
         r += dr;
         c += dc;
-        }
+
     }
     for (int i = 0; i < a.size(); ++i){
         for (int j = 0; j < a[i].size(); ++j){
