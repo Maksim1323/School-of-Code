@@ -1,15 +1,30 @@
 #include <iostream>
-
+#include <vector>
 using namespace std;
 
 int main()
 {
-    int n, dr = 0, dc = 1, r = 0, c = 0;
-    cin << n;
-    for (int cnt = 0; )
-
+    int n = 5, dr = 0, dc = 1, r = 0, c = 0;
+    //cin >> n;
+    vector<vector<int> > a(n, vector<int> (n));
+    for (int cnt = 1; cnt <= n * n + 1; cnt++){
+        a[r][c] = cnt;
+        if (a[(r + dr) % n][(c + dc) % n]){
+        dr = dc;
+        dc = -dr;
+        r += dr;
+        c += dc;
+        }
+    }
+    for (int i = 0; i < a.size(); ++i){
+        for (int j = 0; j < a[i].size(); ++j){
+            cout << a[i][j] << " ";
+        }
+        cout << endl;
+    }
     return 0;
 }
+
 
 dr, dc, r, c = 0, 1, 0, 0
 
