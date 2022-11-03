@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-    int a = 123, b, i = 0;
-    //cin >> a;
+    int a, b, i = 0;
+    cin >> a;
     b = a;
     vector<int> v;
     while(b > 0){
