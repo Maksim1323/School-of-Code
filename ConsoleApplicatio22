@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int n ;
+    cin >> n;
+    switch (n) {
+        case 1:{
+            cout << "гулять";
+            break;
+        }
+        case 2:{
+            cout << "гулять";
+            break;
+        }
+        case 3:{
+            cout << "гулять";
+            break;
+        }
+        case 4:{
+            cout << "гулять";
+            break;
+        }
+        case 5:{
+            cout << "гулять";
+            break;
+        }
+    }
+    return 0;
+}
