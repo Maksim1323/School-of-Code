@@ -1,0 +1,19 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    int N, ai = 0;
+    float af = 0.0;
+    cin >> N;
+    vector<float> v(N);
+    for (int i = 0; i <= N - 1; i++) cin >> v[i];
+    for (int i = 0; i <= N - 1; i++) {
+        if (v[i] - int(v[i]) == 0) ai += v[i];
+        else  af += v[i];
+    }
+    if (ai > af) cout << ai - af;
+    else cout << af - ai;
+    return 0;
+}
