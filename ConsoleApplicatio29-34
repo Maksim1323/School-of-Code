@@ -1,0 +1,52 @@
+A. Минуты до Нового года
+
+#include <iostream>
+using namespace std;
+
+int main()
+    {
+    int t;
+    cin >> t;
+    for(int i = 0; i < t; ++i){
+        int h, m;
+        cin >> h >> m;
+        if(m > 0){
+            h++;
+            cout << (24 - h) * 60 + 60 - m << endl;
+        }
+        else{
+            cout << (24 - h) * 60 << endl;
+        }
+    }
+    return 0;
+}
+
+B. Разделение конфет
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t, n, k, full;
+	cin >> t;
+	for (int i = 0; i < t; ++i) {
+		cin >> n >> k;
+		full = n - n % k;
+		full += min(n % k, k / 2);
+		cout << full << endl;
+	}
+	
+	return 0;
+}
+
+C. Друзья и подарки
+
+
+D. Рождественские деревья
+
+
+E. Новогодние посиделки
+
+
+F. Гирлянда своими руками
+
