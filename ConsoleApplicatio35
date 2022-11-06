@@ -3,20 +3,20 @@ using namespace std;
 
 int main()
 {
-    int n, n60 = 0, n10 = 0, n1 = 0;
+    int n, n1 = 0, n2 = 0, n3 = 0;
     cin >> n;
-    while (n > 30) {
+    while (n > 34) {
         n -= 60;
-        n60++;
-    }
-    while (n <= 30 && n >= 9) {
-        n -= 10;
-        n10++;
-    }
-    while (n <= 8 && n >= 1) {
-        n -= 1;
         n1++;
     }
-    cout << n1 << " " << n10 << " " << n60;
+    while (n > 8) {
+        n -= 10;
+        n2++;
+    }
+    while (n > 0) {
+        n -= 1;
+        n3++;
+    }
+    cout << n3 << " " << n2 << " " << n1 << " ";
     return 0;
 }
