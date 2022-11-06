@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+    if (n == 1) cout << n << " korova";
+    else if (n >= 2 && n <= 4 || n == 0) cout << n << " korovy";
+    else if (n >= 5) cout << n << " korovy";
+    return 0;
+}
