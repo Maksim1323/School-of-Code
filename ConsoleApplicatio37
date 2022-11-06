@@ -1,12 +1,14 @@
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
 
 int main()
 {
-    int n;
+    int n, temp;
     cin >> n;
-    if (n == 1) cout << n << " korova";
-    else if (n >= 2 && n <= 4 || n == 0) cout << n << " korovy";
-    else if (n >= 5) cout << n << " korovy";
+    temp = n % 10;
+    if (n >= 11 && n <= 14) cout << n << " korov";
+    else if (temp == 0 || (temp >= 5 && temp <= 9)) cout << n << " korov";
+    else if (temp == 1) cout << n << " korova";
+    else if (temp >= 2 && temp <= 4) cout << n << " korovy";
     return 0;
 }
