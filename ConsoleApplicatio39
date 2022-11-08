@@ -1,0 +1,12 @@
+Задача №102. Проверить, является ли символ цифрой
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char a;
+    cin >> a;
+    if (char(a) >= 48 && char(a) <= 57) cout << "yes";
+    else cout <<"no";
+    return 0;
+}
