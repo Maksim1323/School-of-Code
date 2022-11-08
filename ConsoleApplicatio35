@@ -1,3 +1,4 @@
+//Задача №304. Билеты на метро
 #include <iostream>
 using namespace std;
 
