@@ -1,0 +1,14 @@
+//Задача №596. Утренняя пробежка - 1
+#include <iostream>
+using namespace std;
+int main()
+{
+    double x, y, i = 1;
+    cin >> x >> y;
+    while (y - x > 0.1 && x < y) {
+        x += 0.7 * x;
+        i++;
+    }
+    cout << i;
+    return 0;
+}
