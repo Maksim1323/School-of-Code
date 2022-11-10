@@ -7,9 +7,9 @@ int main()
     float y, k, x, b;
     cin >> k >> b >> x;
     y = k * x + b;
-    if (y >= 0 && x >= 0) cout >> "I";
-    else if (y >= 0 && x < 0) cout >> "II";
-    else if (y < 0 && x < 0) cout >> "III";
-    else cout >> "IV";
+    if (y >= 0 && x >= 0) cout << "I";
+    else if (y >= 0 && x < 0) cout << "II";
+    else if (y < 0 && x < 0) cout << "III";
+    else cout << "IV";
     return 0;
 }
