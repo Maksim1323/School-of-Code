@@ -1,4 +1,4 @@
-№0 - Монетки
+//№0 - Монетки
 #include<iostream>
 using namespace std;
 
