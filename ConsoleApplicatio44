@@ -1,0 +1,16 @@
+//Задача №3066. Среднее значение последовательности
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    float n, i = 0, semm = 0;
+    cin >> n;
+    while (n != 0) {
+        semm += n;
+        ++i;
+        cin >> n;
+    }
+    cout << semm / i;
+    return 0;
+}
