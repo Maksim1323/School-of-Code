@@ -1,39 +1,27 @@
 //улитка
 #include <iostream>
-#include <vector>
 using namespace std;
-
 int main()
 {
-    int n = 5, dr = 0, dc = 1, r = 0, c = 0;
-    //cin >> n;
-    vector<vector<int> > a(n, vector<int> (n));
-    for (int cnt = 1; cnt <= n * n + 1; cnt++){
-        a[r][c] = cnt;
-        if (a[(r + dr) % n][(c + dc) % n]){
-            dr, dc = dc, -dr;
-        }
-        r += dr;
-        c += dc;
-
+    int n, ZN = 0;
+    cin >>n;
+    int a[n][n];
+    int stop = (n % 2 == 0) ? n/2 : n/2+1;
+    for(int i=0;i<stop;i++){
+        for(int j=i;j<n-i;j++) //вправо
+            a[i][j]=++ZN;
+        for(int j=i+1;j<n-i;j++) //вниз
+            a[j][n-i-1]=++ZN;
+        for(int j=i+1;j<n-i;j++) //влево
+            a[n-i-1][n-j-1]=++ZN;
+        for(int j=i+1;j<n-i-1;j++) //вверх
+           a[n-j-1][i]=++ZN;       
     }
-    for (int i = 0; i < a.size(); ++i){
-        for (int j = 0; j < a[i].size(); ++j){
-            cout << a[i][j] << " ";
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            cout<<a[i][j]<<' ';
         }
-        cout << endl;
+        cout<<endl;
     }
     return 0;
 }
-
-
-dr, dc, r, c = 0, 1, 0, 0
-
-for cnt in range(1, n * m + 1):
-    a[r][c] = cnt
-    
-    if a[(r + dr) % n][(c + dc) % m]:
-        dr, dc = dc, -dr
-
-    r += dr
-    c += dc    
