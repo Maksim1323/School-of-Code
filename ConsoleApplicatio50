@@ -1,3 +1,4 @@
+//нахождение числа армстронга
 #include <iostream>
 
 using namespace std;
