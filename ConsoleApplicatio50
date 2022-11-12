@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int lower_limit, upper_limit, i, r, sum, temp_num;
+    cin >> lower_limit;
+    cin >> upper_limit;
+    for(i = lower_limit; i <= upper_limit; i++){
+        sum = 0;
+        temp_num = i;
+        for(; temp_num >0; temp_num /= 10){
+            r = temp_num % 10;
+            sum = sum + (r * r * r);
+        }
+        if(sum == i) cout << i << endl;
+        }
+    return 0;
+}
