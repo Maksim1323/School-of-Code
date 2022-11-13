@@ -1,0 +1,29 @@
+//Задача C.
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int a, b, q10, w, q, e = 0, a1, i = 0;
+    cin >> a >> b;
+    q10 = 1;
+    i = a;
+    for (int i = a; i <= b; i++) {
+        while(a / q10 != 0) q10 *= 10; 
+         q10 /= 10;
+        if (i <= 99){
+            w = i / q10;
+            q = i % q10;
+            if (q == w) ++e;
+            
+        }
+        else{
+            w = i / q10;
+            q10 /= 10;
+            a1 = i / 10 % q10;
+            q = a1 % 10;
+            if (q == w) ++e;
+        }
+    }
+    cout << e;
+}
