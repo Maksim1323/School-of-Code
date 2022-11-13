@@ -1,0 +1,17 @@
+//Задача B.
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int a, b, q, w, e = 0, a1;
+    cin >> a >> b;
+    a1 = a;
+    for (int i = a1; i <= b; i++) {
+        q = i % 10;
+        a = i / 10;
+        w = a % 10;
+        if (q == w) ++e;
+    }
+    cout << e;
+}
