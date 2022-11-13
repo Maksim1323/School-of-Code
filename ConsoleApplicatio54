@@ -1,0 +1,15 @@
+//Задача D.
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    float a, b;
+    cin >> b >> a;
+    if (a >= b * 0.85 && a == b * 1) cout << 5;
+    else if (a >= b * 0.71 && a < b * 0.84) cout << 4;
+    else if (a >= b * 0.51 && a < b * 0.7) cout << 3;
+    else if (a >= b * 0.11 && a < b * 0.5) cout << 2;
+    else if (a >= b * 0.01 && a < b * 0.1) cout << 1;
+    if (a == a * 0) cout << 0;
+}
