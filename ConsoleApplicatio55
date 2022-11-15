@@ -1,0 +1,15 @@
+//For36
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int N, K, semm;
+    cin >> N >> K;
+    for (int i = 1; i <= N; i++){
+        semm += pow(i, K);
+    }
+    cout << semm;
+    return 0;
+}
