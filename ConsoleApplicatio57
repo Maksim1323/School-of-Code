@@ -1,0 +1,17 @@
+//For38
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    long long N, j, semm = 0;
+    cin >> N;
+    j = N;
+    for (int i = 1; i <= N; i++){
+        semm += pow(i, j);
+        j--;
+    }
+    cout << semm;
+    return 0;
+}
