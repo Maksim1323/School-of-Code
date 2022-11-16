@@ -1,0 +1,16 @@
+//For17
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int N;
+    float A, semm = 1;
+    cin >> A >> N;
+    for (int i = 1; i <= N; i++){
+        semm += pow(A, i);
+    }
+    cout << semm;
+    return 0;
+}
