@@ -1,0 +1,18 @@
+//seeies11
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    long long K, N, n;
+    bool x;
+    cin >> K >> N;
+    while (N){
+        cin >> n;
+        if (n > K) x = true;
+    }
+    cout << x;
+    return 0;
+}
