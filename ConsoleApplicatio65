@@ -1,0 +1,17 @@
+//Задача №597. Утренняя пробежка - 2
+#include <iostream>
+using namespace std;
+int main()
+{
+	int i = 1, y;
+	float x, q = 0;
+	cin >> x;
+	cin >> y;
+	q = x;
+	while (q < y) {
+		x += (x / 100) * 70;
+		q += x;
+		++i;
+	}
+	cout << i;
+}
