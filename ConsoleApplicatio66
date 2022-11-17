@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	unsigned int A = 11, B = 9, STEP = 4, q, w, e;
+	e = ~A;
+	cout << e << endl;
+	q = A ^ B;
+	cout << q << endl;
+	w = B << STEP;
+	cout << w << endl;
+}
