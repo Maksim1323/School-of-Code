@@ -1,0 +1,13 @@
+//Домашка на строки:№1
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string s;
+    cin >> s;
+    if (s.size() % 2 == 0) cout << s << s;
+
+    return 0;
+}
