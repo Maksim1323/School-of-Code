@@ -1,0 +1,16 @@
+//Домашка на строки:№2
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string s, s2 = "";
+    int n, maxx;
+    cin >> n;
+    for (int i = 1; i <= n; i++)
+        cin >> s;
+        if (s.size() > s2.size()) s2 = s;
+    cout << s2;
+    return 0;
+}
