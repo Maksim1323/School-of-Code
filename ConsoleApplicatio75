@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, b;
+    cin >> a >> b;
+    int at = a, bt = b;
+    while (a && b){
+        if (a > b) a = a % b;
+        else b = b % a;
+    }// Нашли НОД через алгоритм Евклида
+    cout << (at * bt) / (a + b) << endl; // Само тождество a*b/НОД(a,b). В данном случае a+b - это НОД
+    return 0;
+}
