@@ -1,0 +1,22 @@
+//Домашка на строки: №4
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    string s;
+    int semm = 0, step, nomer;
+    cin >> s;
+    step = s.size();
+    /*for(int i = 0; i < s.size(); i++){
+        nomer = s.find(s[i], 0);
+        semm += nomer * pow(2, step);
+        step -= 1;
+    }*/
+    for(int i = 0; i < s.size(); i++){
+        char n = s[i];
+        cout << n << endl;}
+    return 0;
+}
