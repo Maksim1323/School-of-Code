@@ -1,0 +1,18 @@
+//Домашка на строки: №4
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    string s;
+    int semm = 0;
+    cin >> s;
+    for(int i = 0; i < s.size(); i++){
+        if (s[i] = '0') s[i] = '1';
+        semm += pow(2, i);
+    }
+    cout << semm;
+    return 0;
+}
