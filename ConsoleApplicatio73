@@ -1,0 +1,20 @@
+//Домашка на строки: №7
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string s, hcla, bykb;
+    cin >> s;
+    char q;
+    for(int i = 0; i <= s.size(); i++){
+        if (s[i] >= 48 && s[i] <= 57) hcla += s[i];
+        else bykb += s[i];
+    }
+    cout << bykb << endl;
+    for (int j = hcla.size(); j >= 0; j--){
+        cout << hcla[j];
+    }
+    return 0;
+}
