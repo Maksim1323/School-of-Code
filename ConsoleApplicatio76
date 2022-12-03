@@ -1,0 +1,148 @@
+//Структуры ДЗ №1
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+struct agrostudent
+{
+    int classs, n, power;
+    float ocenka;
+    string name;
+};
+int main()
+{
+    agrostudent agrostudent;
+    agrostudent.name = "Maksim";
+    agrostudent.classs = 9;
+    agrostudent.ocenka = 4.1;
+    agrostudent.n = 2;
+    agrostudent.power = 6;
+    cout << agrostudent.name << " " << agrostudent.classs << " " << agrostudent.ocenka << " " << agrostudent.n << " " << agrostudent.power;
+}
+//Структуры ДЗ №2
+#include <iostream>
+#include <algorithm>
+#include <string>
+
+using namespace std;
+
+struct agrostudent
+{
+    int classs = 9, ocenka, n = 2, power = 6;
+    string name = "Maksim";
+};
+struct agrostudent2
+{
+    int classs = 9, ocenka, n = 3, power = 4;
+    string name = "Dima";
+};
+struct agrostudent3
+{
+    int classs = 2, ocenka, n = 2, power = 1;
+    string name = "Miron";
+};
+
+int main()
+{
+    agrostudent agrostudent;
+    agrostudent2 agrostudent2;
+    agrostudent3 agrostudent3;
+    int k = agrostudent.power * agrostudent.n;
+    int k2 = agrostudent2.power * agrostudent2.n;
+    int k3 = agrostudent3.power * agrostudent3.n;
+    cout << max(max(k, k2), k3);
+
+}
+//Структуры ДЗ №3
+#include <iostream>
+#include <algorithm>
+#include <string>
+#include <locale>
+
+using namespace std;
+
+struct times
+{
+    int hour, minute, second;
+};
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    times times;
+    cin >> times.hour >> times.minute >> times.second;
+    cout << "Время 1 = " << times.hour * 3600 + times.minute * 60 + times.second << "секунд";
+}
+//Структуры ДЗ №4
+#include <iostream>
+#include <algorithm>
+#include <string>
+#include <locale>
+
+using namespace std;
+
+struct times
+{
+    int hour, minute, second;
+};
+struct times2
+{
+    int hour, minute, second;
+};
+struct times3
+{
+    int hour, minute, second;
+};
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    times times;
+    times2 times2;
+    times3 times3;
+    cin >> times.hour >> times.minute >> times.second;
+    cin >> times2.hour >> times2.minute >> times2.second;
+    times3.hour = max(times.hour, times2.hour) - min(times.hour, times2.hour);
+    times3.minute = max(times.minute, times2.minute) - min(times.minute, times2.minute);
+    times3.second = max(times.second, times2.second) - min(times.second, times2.second);
+    cout << times3.hour << " Часов " << times3.minute << " Минут " << times3.second << " Секунд";
+}
+//Структуры ДЗ №5
+#include <iostream>
+#include <algorithm>
+#include <string>
+#include <locale>
+
+using namespace std;
+
+struct cat
+{
+    int n = 9, pol = 1; // pol==0 --кошак девочка poi == 1 -- мальчик
+    string zyuk = "мууууууууууурррр";
+};
+struct cat2
+{
+    int n = 9, pol = 0;
+    string zyuk = "МЯЯЯЯЯЯУУУУ";
+};
+struct cat3
+{
+    int n = 7, pol = 1;
+    string zyuk = "МУУУУУУУУУУРРРРРРРР";
+};
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    cat cat;
+    cat2 cat2;
+    if (cat.pol + cat2.pol == 1) {
+        cat3 cat3;
+        cout << cat3.n << " " << cat3.pol << " " << cat3.zyuk;
+    }
+    else if (cat.pol + cat2.pol == 2) {
+        cat.n -= 1; cat2.n -= 1;
+        cout << cat.n << " " << cat2.n;
+    }
+    else cout << cat.zyuk << " " << cat2.zyuk;
+}
