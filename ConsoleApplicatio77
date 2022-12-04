@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int n, z;
+	float semm = 0.0;
+	cin >> n;
+	for (int i = 1; i <= n; i++) {
+		cin >> z;
+		semm += z;
+	}
+	semm /= n;
+	if (semm <= 10.0 && semm >= 9.9) cout << "A";
+	else if (semm <= 9.8 && semm >= 8.2) cout << "B";
+	else if (semm <= 8.1 && semm >= 7.4) cout << "C";
+	else if (semm <= 7.3 && semm >= 6.6) cout << "D";
+	else if (semm <= 6.5 && semm >= 5.8) cout << "E";
+	else if (semm <= 5.8 && semm >= 5.2) cout << "F";
+	else if (semm <= 5.1 && semm >= 4.4) cout << "G";
+	else if (semm <= 4.2 && semm >= 2.6) cout << "H";
+	else if (semm <= 2.5 && semm >= 1.8) cout << "I";
+	else cout << "J";
+}
