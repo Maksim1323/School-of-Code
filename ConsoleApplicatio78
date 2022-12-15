@@ -1,0 +1,15 @@
+//Домашка: №0
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    int a, b, x;
+    cin >> a >> b;
+    x = sqrt(b / a);
+    if(a * x * x == b) cout << x;
+    else cout << "There is no solution";
+    return 0;
+}
