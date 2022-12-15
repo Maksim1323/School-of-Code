@@ -13,3 +13,17 @@ int main()
     else cout << "There is no solution";
     return 0;
 }
+
+//Домашка: №1
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a;
+    cin >> a;
+    cout << "Fahrenheit " << a * 1.8 + 32 << endl;
+    cout << "Kelvin " << a + 273.15 << endl;
+    return 0;
+}
