@@ -1,0 +1,51 @@
+//№0 простая задача на двумерный:
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n = 0;
+    int mass[3][3];
+    for (int i = 0; i < 3; i++){
+        for (int j = 0; j < 3; j++){
+            mass[i][j] = n;
+            n++;
+        }
+    }
+    for (int i = 0; i < 3; i++){
+        for (int j = 0; j < 3; j++){
+            cout << mass[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+//№1 Усложняем №0: 
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n = 0, N, M;
+    do{
+    cin >> N >> M;
+    system("cls");
+    }while (N > 10 || M > 10);
+    int mass[N][M];
+    for (int i = 0; i < N; i++){
+        for (int j = 0; j < M; j++){
+            mass[i][j] = n;
+            n++;
+        }
+    }
+    for (int i = 0; i < N; i++){
+        for (int j = 0; j < M; j++){
+            cout << mass[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+№2
