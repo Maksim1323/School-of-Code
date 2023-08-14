@@ -1,0 +1,85 @@
+int IN1 = 4; int IN2 = 0; // контакты управления первым щёточным двигателем или первой обмоткой шагового двигателя.  
+int IN3 = 2; int IN4 = 14; //  контакты управления вторым щёточным двигателем или второй обмоткой шагового двигателя. 
+int ENA = 5; int ENB = 12; //контакты для активации/деактивации первого и второго двигателей или соответствующих обмоток ШД.
+int i; // Значение ШИМ (или скорости вращения)
+int c;
+void setup()
+{
+  // Установка всех управляющих пинов в режим выхода
+  Serial.begin(9600);
+  pinMode (ENA, OUTPUT);
+  pinMode (IN1, OUTPUT);
+  pinMode (IN2, OUTPUT);
+  pinMode (ENB, OUTPUT);
+  pinMode (IN4, OUTPUT);
+  pinMode (IN3, OUTPUT);
+}
+void loop()
+{
+    c = Serial.read();
+    if (c == 'w')
+    {
+      Serial.println("Прямо");
+      digitalWrite (IN1, HIGH);
+      digitalWrite (IN2, LOW);
+      digitalWrite (IN3, HIGH);
+      digitalWrite (IN4, LOW);
+      i = 180;
+      analogWrite(ENA, i);
+      analogWrite(ENB, i);
+      delay(1000);
+    }
+    if (c == 's')
+    {
+      Serial.println("Назад");
+      digitalWrite (IN1, LOW);
+      digitalWrite (IN2, HIGH);
+      digitalWrite (IN3, LOW);
+      digitalWrite (IN4, HIGH);
+      i = 180;
+      analogWrite(ENA, i);
+      analogWrite(ENB, i);
+      delay(1000);
+      c = 'x';
+    }
+    if (c == 'a')
+    {
+      Serial.println("Влево");
+      digitalWrite(IN1, HIGH);
+      digitalWrite(IN2, LOW);
+      digitalWrite(IN3, LOW);
+      digitalWrite(IN4, LOW);
+      i = 180;
+      analogWrite(ENA, i);
+      analogWrite(ENB, i);
+      delay(1000);
+      c = 'x';
+    }
+    if (c == 'd')
+    {
+      Serial.println("Вправо");
+      digitalWrite(IN1, LOW);
+      digitalWrite(IN2, LOW);
+      digitalWrite(IN3, HIGH);
+      digitalWrite(IN4, LOW);
+      i = 180;
+      analogWrite(ENA, i);
+      analogWrite(ENB, i);
+      delay(1000);
+      c = 'x';
+    }
+    if (c == 'q')
+    {
+      digitalWrite(IN1, LOW);
+      digitalWrite(IN2, LOW);
+      digitalWrite(IN3, LOW);
+      digitalWrite(IN4, HIGH);
+      i = 0;
+      analogWrite(ENA, i);
+      analogWrite(ENB, i);
+      delay(1000);
+      c = 'x';
+    }
+
+  delay(500);
+}
